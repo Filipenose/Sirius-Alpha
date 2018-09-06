@@ -34,7 +34,8 @@
           <table class="table">
             <table class="table">
             <thead>
-              
+              <p>Digite Para Buscar:</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
 
                 <tr>
                 

@@ -13,12 +13,12 @@
         
 	    }
 
-	    public function getId_tarefa()    {
+	    public function getId_tarefas()    {
 	    	return $this->id_tarefa;
 	    }
 	    
-	    public function setId_tarefa($id_tarefa)    {
-	    	$this->id_tarefa = $id_tarefa;
+	    public function setId_tarefa($id_tarefas)    {
+	    	$this->id_tarefa = $id_tarefas;
 	    }					
 
 	    public function getNome_tarefa()  {

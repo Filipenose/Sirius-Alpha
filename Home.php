@@ -40,7 +40,6 @@
   <input class="form-control" id="myInput" type="text" placeholder="Search..">
 
                 <tr>
-                
                 <th>ID</th>
                 <th>Nome</th>
                 <th>Descrição</th>
