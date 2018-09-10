@@ -1,15 +1,16 @@
 <?php
-
+include_once "CadastrarTarefa.php";
 include_once "Connect.php";
 include_once "Tarefas.php";
   
 class DaoTarefa {
 
 static function createTarefa(Tarefas $task) {
-        $con = Connect::getConnection();
+        //$con = Connect::getConnection();
         try {
-            $sql = "INSERT INTO tarefas(data_criacao,descricao,id_tarefas,nome_tarefa,user_criador) values (?,?,?,?,?,NOW())";
-            $query = $con->prepare($sql);
+            $con = Connect::getConnection();
+            /*$sql = "INSERT INTO tarefas(data_criacao,descricao,id_tarefas,nome_tarefa,user_criador) values (?,?,?,?,?,NOW())";*/
+            $query = $con->prepare("INSERT INTO tarefas(data_criacao,descricao,id_tarefas,nome_tarefa,user_criador) values ($data_criacao,$descricao,$id_tarefas,$nome_tarefa,$user_criador,NOW())");
 
             //PARAM_STR: Representa o tipo de dados SQL CHAR, VARCHAR ou outro tipo de dados de cadeia.
             $query->bindValue(1, $task->getData_criacao());
