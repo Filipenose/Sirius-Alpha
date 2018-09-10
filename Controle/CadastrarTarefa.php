@@ -33,7 +33,7 @@ $task->setId_tarefa($id_tarefas);
 $task->setNome_tarefa($nome_tarefa);
 $task->setUser_criador($user_criador);
 
-session_start();
+//session_start();
 
 
 

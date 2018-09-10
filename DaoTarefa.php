@@ -9,8 +9,8 @@ static function createTarefa(Tarefas $task) {
         //$con = Connect::getConnection();
         try {
             $con = Connect::getConnection();
-            /*$sql = "INSERT INTO tarefas(data_criacao,descricao,id_tarefas,nome_tarefa,user_criador) values (?,?,?,?,?,NOW())";*/
-            $query = $con->prepare("INSERT INTO tarefas(data_criacao,descricao,id_tarefas,nome_tarefa,user_criador) values ($data_criacao,$descricao,$id_tarefas,$nome_tarefa,$user_criador,NOW())");
+            $sql = "INSERT INTO tarefas(data_criacao,descricao,id_tarefas,nome_tarefa,user_criador) values (?,?,?,?,?,NOW())";
+            $query = $con->prepare($sql);
 
             //PARAM_STR: Representa o tipo de dados SQL CHAR, VARCHAR ou outro tipo de dados de cadeia.
             $query->bindValue(1, $task->getData_criacao());
@@ -18,7 +18,7 @@ static function createTarefa(Tarefas $task) {
             $query->bindValue(3, $task->getId_tarefas());
             $query->bindValue(4, $task->getNome_tarefa(), PDO::PARAM_STR);
             $query->bindValue(5, $task->getUser_criador(), PDO::PARAM_STR);
-            $query->execute();
+            $query->executetask();
             
             
         } catch (Throwable $ex) {
@@ -40,11 +40,11 @@ static function createTarefa(Tarefas $task) {
             }
              $stmt = $db->query($str);
 
-            $stmt->setFetchMode(PDO::FETCH_CLASS, 'Acao');
+            $stmt->setFetchMode(PDO::FETCH_CLASS, 'tarefas');
             $dtos = $stmt->fetchAll();
             return $dtos;
         } catch (Throwable $ex) {
-            $e = new Exception("Um erro ocorreu ao obter dados da ação. <br>" . $ex->getMessage());
+            $e = new Exception("Um erro ocorreu ao obter dados das tarefas. <br>" . $ex->getMessage());
             throw $e;
         }
     }
