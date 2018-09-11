@@ -20,38 +20,38 @@
 
 <div class="container">
   <h2>Tarefas</h2>
-  <form action="Controle/CadastrarTarefa.php" method="POST">
+  <form action="Controle/CadastrarOportunidade.php" method="POST">
     <div class="form-group">
-      <label for="idTarefa">Nome Da Oportunidade:</label>
-      <input type="id" class="form-control" id="idTarefa" placeholder="insira o ID " name="idTarefa">
+      <label for="nomeOppp">Nome Da Oportunidade:</label>
+      <input type="name" class="form-control" id="nomeOpp" placeholder="Digite o Nome da Oportunidade" name="nomeOpp">
     </div>
     <div class="form-group">
-      <label for="NomeTarefa">Id da Oportunidade:</label>
-      <input type="name" class="form-control" id="NomeTarefa" placeholder="insira o nome da tarefa" name="NomeTarefa">
+      <label for="idOpp">Id da Oportunidade:</label>
+      <input type="id" class="form-control" id="idOpp" placeholder="insira o Id da Oportunidade" name="idOpp">
     </div>
      <div class="form-group">
-      <label for="descricao">Descrição da Oportunidade:</label>
-      <input type="Descrição" class="form-control" id="descricao" placeholder="Descrição Resumida" name="descricao">
+      <label for="descricaoOpp">Descrição da Oportunidade:</label>
+      <input type="Descricao" class="form-control" id="descricaoOpp" placeholder="Descrição Resumida" name="descricaoOpp">
     </div>
      <div class="form-group">
-      <label for="data_criacao">Status da Oportunidade:</label>
-      <input type="data" class="form-control" id="data_criacao" placeholder="Digite a data no formato ano/mês/dia" name="data_criacao">
+      <label for="statusOpp">Status da Oportunidade:</label>
+      <input type="status" class="form-control" id="statusOpp" placeholder="Status (Ativo ou Não Ativo)" name="statusOpp">
     </div>
      <div class="form-group">
-      <label for="user_criador">Fabricante:</label>
-      <input type="name" class="form-control" id="nome_criador" placeholder="Digite seu nome" name="nome_criador">
+      <label for="fabricante">Fabricante:</label>
+      <input type="fabricante" class="form-control" id="fabricante" placeholder="Digite qual o fabricante" name="fabricante">
     </div>
     <div class="form-group">
-      <label for="idTarefa">Consultor:</label>
-      <input type="id" class="form-control" id="idTarefa" placeholder="insira o ID " name="idTarefa">
+      <label for="consultor">Consultor:</label>
+      <input type="consultor" class="form-control" id="consultor" placeholder="Digite o nome do Owner dessa conta" name="consultor">
     </div>
     <div class="form-group">
-      <label for="idTarefa">Cliente:</label>
-      <input type="id" class="form-control" id="idTarefa" placeholder="insira o ID " name="idTarefa">
+      <label for="cliente">Cliente:</label>
+      <input type="cliente" class="form-control" id="cliente" placeholder="Digite a Razão Social do Cliente" name="cliente">
     </div>
     <div class="form-group">
-      <label for="idTarefa">Histórico</label>
-      <input type="id" class="form-control" id="idTarefa" placeholder="insira o ID " name="idTarefa">
+      <label for="historico">Histórico</label>
+      <input type="historico" class="form-control" id="historico" placeholder="Digite o Histórico Detalhado da Oportunidade" name="historico">
     </div>
 
     <button type="submit" class="btn btn-default">Cadastar</button>
