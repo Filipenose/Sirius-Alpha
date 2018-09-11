@@ -9,7 +9,7 @@ static function createTarefa(Tarefas $task) {
         $con = Connect::getConnection();
         try {
             $con = Connect::getConnection();
-            $sql = "INSERT INTO tarefas(data_criacao,descricao,id_tarefas,nome_tarefa,user_criador) values (?,?,?,?,?,NOW())";
+            $sql = "INSERT INTO tarefas(data_criacao,descricao,id_tarefas,nome_tarefa,user_criador) values (?,?,?,?,?)";
             $query = $con->prepare($sql);
 
             //PARAM_STR: Representa o tipo de dados SQL CHAR, VARCHAR ou outro tipo de dados de cadeia.
