@@ -1,5 +1,7 @@
 <!-- Inicio navbar -->
-
+	<?php 
+	header("Content-Type: text/html; charset=ISO-8859-1",true);
+ 	?>
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
 	<div class="navbar-header">

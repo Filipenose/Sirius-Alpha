@@ -1,10 +1,9 @@
 
 <?php
-
     include_once("menu_admin.php");   
-  ?>  
+?>  
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <meta charset="utf-8">
 
 <head>
