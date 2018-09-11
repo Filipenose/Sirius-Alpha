@@ -13,7 +13,7 @@ static function createUsuario(Usuario $user) {
 
             //PARAM_STR: Representa o tipo de dados SQL CHAR, VARCHAR ou outro tipo de dados de cadeia.
 
-            $query->bindValue(1, $invest->getCod_usuario(), PDO::PARAM_STR);
+            $query->bindValue(1, $invest->getCod_usuario());
             $query->bindValue(2, $invest->getNome(), PDO::PARAM_STR);
             $query->bindValue(3, $invest->getEmail());
             $query->bindValue(4, $invest->getSenha(), PDO::PARAM_STR);

@@ -20,7 +20,7 @@ if ($connect->query($sql) === TRUE) {
  	echo "Erro: ".$sql. "<br>" . $Connect->error;
  }
  $connect->close();*/
-$con = Connect::getConnection();
+//$con = Connect::getConnection();
     //Puxando os dados e colocando numa sessão, quando fechar a página a sessão morre...
 
 try {
@@ -33,17 +33,17 @@ $task->setId_tarefa($id_tarefas);
 $task->setNome_tarefa($nome_tarefa);
 $task->setUser_criador($user_criador);
 
-session_start();
+//session_start();
+DaoTarefa::createTarefa($task);
 
 
-
-if (isset($con)) {
+if (isset($task)) {
 echo "<script language='JavaScript'>alert(' Cadastro foi realizado com seucesso !! '); window.location = '../home.php';</script>" ;   # code...
 }else{
    echo "<script language='JavaScript'>alert(' DEU MERDA PIVETE !! '); window.location = '../CadastroDeTarefa.php';</script>" ;
 }
 
-DaoTarefa::createTarefa($task);
+//DaoTarefa::createTarefa($task);
 
 } catch (Throwable $e) {
     echo $e->getMessage();

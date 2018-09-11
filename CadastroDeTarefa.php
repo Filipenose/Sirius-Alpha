@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <meta charset="utf-8">
 
 <head>
@@ -13,10 +13,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<?php
 
-    include_once("menu_admin.php");   
-  ?>  
+<?php
+   
+   include_once("menu_admin.php");   
+
+?>  
 
 
 <div class="container">
@@ -48,4 +50,10 @@
 </div>
 
 </body>
+
+<?php
+   // header("Content-Type: text/html; charset=ISO-8859-1",true);
+  //include_once("menu_admin.php");   
+  ?>  
+
 </html>

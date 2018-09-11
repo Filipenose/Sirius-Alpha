@@ -1,5 +1,7 @@
 <!-- Inicio navbar -->
-
+	<?php 
+	header("Content-Type: text/html; charset=ISO-8859-1",true);
+ 	?>
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
 	<div class="navbar-header">
@@ -20,7 +22,7 @@
 			<!--<li><a href="cad_usuario.php">Cadastrar</a></li>-->
 			<li><a href="Home.php">Lista de Tarefas</a></li>
 			<li><a href="CadastroDeTarefa.php">Inserir Tarefas</a></li>
-			<li><a href="Home.php">Inserir Oportunidades</a></li>                
+			<li><a href="CadastroDeOportunidade.php">Inserir Oportunidades</a></li>                
 		  </ul>
 		</li>
 		<li><a href="sair.php">Sair</a></li>
