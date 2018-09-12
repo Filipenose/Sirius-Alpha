@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 10-Set-2018 às 20:01
+-- Generation Time: 12-Set-2018 às 18:46
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -37,17 +37,16 @@ CREATE TABLE `oportunidade` (
   `consultor_Opp` varchar(50) NOT NULL,
   `cliente_Opp` varchar(50) NOT NULL,
   `historico_Opp` varchar(500) NOT NULL,
-  `vencimento` date NOT NULL
+  `vencimento` date NOT NULL,
+  `id_Opp_Fab` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `oportunidade`
 --
 
-INSERT INTO `oportunidade` (`nome_Opp`, `id_Opp`, `descricao_Opp`, `status_Opp`, `fabricante`, `consultor_Opp`, `cliente_Opp`, `historico_Opp`, `vencimento`) VALUES
-('Teste', 1, 'experimentar as diversidades culturais, aprendem a interagir em grupos e passam a ser produtores do próprio conhecimento.\r\n\r\n\r\nCom a missão de oferecer um espaço acolhedor e preparar as crianças para este processo inicial de aprendizagem, a escola estimula a criação de autonomia, a leitura, a escrita e a capacidade de interpretação dos alunos por meio de atividades lúdicas e educativas.\r\n\r\n\r\nPor valorizar estes princípios e acreditar que a educação é a base para um futuro promissor, o Educa Mais', 'Ativo', 'HPE', 'Filipe', 'São Rafael', 'Eu tava com meus mano lá na minha quebrada, Chegou o Vanderlei e veio dar idéia errada Ele virou pra mim e fez a proposição:Orgia de traveco com scat de montão.', '0000-00-00'),
-('Projeto de backup Cardio', 2, 'lorem ipsumasdasdasdasdasdjhgajsd ajsdghjasdghasdhjdg', 'jaSHDGAJSDGHADHGAS JASHDGAJSHDkjashdkajsdhaksjdhaksjda', 'Arcserve', 'André luiz da silva nery', 'Cardio pulmonar', 'asdasdhjghjghasghghasdghghghasd', '2018-08-31'),
-('Teste', 3, 'TEste', 'Teste', 'TEste', 'André', 'Teste', 'Teste', '2018-09-10');
+INSERT INTO `oportunidade` (`nome_Opp`, `id_Opp`, `descricao_Opp`, `status_Opp`, `fabricante`, `consultor_Opp`, `cliente_Opp`, `historico_Opp`, `vencimento`, `id_Opp_Fab`) VALUES
+('teste2', 2, 'teste2', 'ativo', 'teste2', 'Andr?', 'HPE', 'Teste Teste teste testet t?ste ??o p?ul?o', '2018-09-12', '321456');
 
 -- --------------------------------------------------------
 
@@ -68,9 +67,7 @@ CREATE TABLE `tarefas` (
 --
 
 INSERT INTO `tarefas` (`id_tarefas`, `nome_tarefa`, `descricao`, `data_criacao`, `user_criador`) VALUES
-(1, 'cotação sophos central', 'cotar e enviar para andré 1 e 3 anos', '2018-08-20', 'filipe nascimento'),
-(2, 'mapeamento sophos andré', 'Efetuar o mapeamento de oportunidade sophos para andré. 6 endpoint intercpt x  e sophos central.', '2018-08-29', 'Fredy Dias'),
-(3, 'Mapear dell andré', 'Mapear Dell. 6x R540 em nome da cardio pulmonar', '2018-08-29', 'Filipe Nascimento');
+(803, 'cotar Sophos para andr? Cliente Prom?dica', 'Rrealizar a cota??o de 4 xg 105 para a paraty com margem de 0,8 e solicitar desconto de oportunidade', '2018-09-12', 'Filipe Nascimento');
 
 -- --------------------------------------------------------
 
@@ -99,10 +96,34 @@ INSERT INTO `usuario` (`nome`, `email_usuario`, `ativo`, `senha_usuario`, `cod_p
 --
 
 --
+-- Indexes for table `oportunidade`
+--
+ALTER TABLE `oportunidade`
+  ADD PRIMARY KEY (`id_Opp`),
+  ADD UNIQUE KEY `id_Opp` (`id_Opp`),
+  ADD UNIQUE KEY `id_Opp_Fab` (`id_Opp_Fab`);
+
+--
 -- Indexes for table `tarefas`
 --
 ALTER TABLE `tarefas`
   ADD PRIMARY KEY (`id_tarefas`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `oportunidade`
+--
+ALTER TABLE `oportunidade`
+  MODIFY `id_Opp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tarefas`
+--
+ALTER TABLE `tarefas`
+  MODIFY `id_tarefas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=804;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
