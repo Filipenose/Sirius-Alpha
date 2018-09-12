@@ -13,7 +13,7 @@ static function createTarefa(Tarefas $task) {
             $query = $con->prepare($sql);
 
             //PARAM_STR: Representa o tipo de dados SQL CHAR, VARCHAR ou outro tipo de dados de cadeia.
-            $query->bindValue(1 ,$task->getData_criacao()/*PDO::PARAM_DATE*/);
+            $query->bindValue(1 ,    $task->getData_criacao());
             $query->bindValue(2 ,   $task->getDescricao(), PDO::PARAM_STR);
             $query->bindValue(3 ,  $task->getId_tarefas(), PDO::PARAM_INT);
             $query->bindValue(4 , $task->getNome_tarefa(), PDO::PARAM_STR);
@@ -22,7 +22,7 @@ static function createTarefa(Tarefas $task) {
             
             
         } catch (Throwable $ex) {
-            $e = new Exception("Um erro ocorreu ao inserir um novo investidor. <br>" . $ex->getMessage());
+            $e = new Exception("Um erro ocorreu ao inserir uma nova Tarefa. <br>" . $ex->getMessage());
             throw $e;
         }
     }

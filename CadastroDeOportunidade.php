@@ -26,16 +26,16 @@
       <input type="name" class="form-control" id="nomeOpp" placeholder="Digite o Nome da Oportunidade" name="nomeOpp">
     </div>
     <div class="form-group">
-      <label for="idOpp">Id da Oportunidade:</label>
-      <input type="id" class="form-control" id="idOpp" placeholder="insira o Id da Oportunidade" name="idOpp">
+      <label for="idOppFab">Id da Oportunidade:</label>
+      <input type="id" class="form-control" id="idOppFab" placeholder="insira o Id da Oportunidade" name="idOppFab">
     </div>
      <div class="form-group">
-      <label for="descricaoOpp">DescriÃ§Ã£o da Oportunidade:</label>
-      <input type="Descricao" class="form-control" id="descricaoOpp" placeholder="DescriÃ§Ã£o Resumida" name="descricaoOpp">
+      <label for="descricaoOpp">Descrição da Oportunidade:</label>
+      <input type="Descricao" class="form-control" id="descricaoOpp" placeholder="Descrição Resumida" name="descricaoOpp">
     </div>
      <div class="form-group">
       <label for="statusOpp">Status da Oportunidade:</label>
-      <input type="status" class="form-control" id="statusOpp" placeholder="Status (Ativo ou NÃ£o Ativo)" name="statusOpp">
+      <input type="status" class="form-control" id="statusOpp" placeholder="Status (Ativo ou Não Ativo)" name="statusOpp">
     </div>
      <div class="form-group">
       <label for="fabricante">Fabricante:</label>
@@ -47,11 +47,15 @@
     </div>
     <div class="form-group">
       <label for="cliente">Cliente:</label>
-      <input type="cliente" class="form-control" id="cliente" placeholder="Digite a RazÃ£o Social do Cliente" name="cliente">
+      <input type="cliente" class="form-control" id="cliente" placeholder="Digite a Razão Social do Cliente" name="cliente">
     </div>
     <div class="form-group">
-      <label for="historico">HistÃ³rico</label>
-      <input type="historico" class="form-control" id="historico" placeholder="Digite o HistÃ³rico Detalhado da Oportunidade" name="historico">
+      <label for="historico">Histórico</label>
+      <input type="historico" class="form-control" id="historico" placeholder="Digite o Histórico Detalhado da Oportunidade" name="historico">
+    </div>
+    <div class="form-group">
+      <label for="vencimento">Vencimento</label>
+      <input type="vencimento" class="form-control" id="vencimento" placeholder="Digite o vencimento da Oportunidade ano-mês-dia" name="vencimento">
     </div>
 
     <button type="submit" class="btn btn-default">Cadastar</button>

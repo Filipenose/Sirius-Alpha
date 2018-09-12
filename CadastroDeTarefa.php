@@ -33,12 +33,12 @@
       <input type="name" class="form-control" id="NomeTarefa" placeholder="insira o nome da tarefa" name="NomeTarefa">
     </div>
      <div class="form-group">
-      <label for="descricao">DescriÃ§Ã£o:</label>
-      <input type="DescriÃ§Ã£o" class="form-control" id="descricao" placeholder="DescriÃ§Ã£o Resumida" name="descricao">
+      <label for="descricao">Descrição:</label>
+      <input type="Descrição" class="form-control" id="descricao" placeholder="Descrição Resumida" name="descricao">
     </div>
      <div class="form-group">
-      <label for="data_criacao">Data de criaÃ§Ã£o:</label>
-      <input type="data" class="form-control" id="data_criacao" placeholder="Digite a data no formato ano/mÃªs/dia" name="data_criacao">
+      <label for="data_criacao">Data de criação:</label>
+      <input type="data" class="form-control" id="data_criacao" placeholder="Digite a data no formato ano/mês/dia" name="data_criacao">
     </div>
      <div class="form-group">
       <label for="user_criador">Usuario Criador:</label>

@@ -10,6 +10,9 @@ $id_tarefas = $_POST['idTarefa'];
 $nome_tarefa = $_POST['NomeTarefa'];
 $user_criador = $_POST['nome_criador'];
 
+
+
+
 /*$sql = "INSERT INTO tarefas VALUES";
 $sql .="('$data_criacao','$descricao','$id_tarefa','$nome_tarefa','$user_criador')";
 
@@ -21,7 +24,7 @@ if ($connect->query($sql) === TRUE) {
  }
  $connect->close();*/
 //$con = Connect::getConnection();
-    //Puxando os dados e colocando numa sess√£o, quando fechar a p√°gina a sess√£o morre...
+    //Puxando os dados e colocando numa sess„o, quando fechar a p·gina a sess„o morre...
 
 try {
 
@@ -42,6 +45,7 @@ echo "<script language='JavaScript'>alert(' Cadastro foi realizado com seucesso 
 }else{
    echo "<script language='JavaScript'>alert(' DEU MERDA PIVETE !! '); window.location = '../CadastroDeTarefa.php';</script>" ;
 }
+
 
 //DaoTarefa::createTarefa($task);
 

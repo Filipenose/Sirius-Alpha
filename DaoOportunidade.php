@@ -3,26 +3,31 @@ include_once "CadastrarOportunidade.php";
 include_once "Connect.php";
 include_once "Oportunidade.php";
   
-class DaoTarefa {
+class DaoOportunidade {
 
-static function createOportundiade(Tarefas $opp) {
+static function createOportunidade(Oportunidade $opp) {
         $con = Connect::getConnection();
         try {
             $con = Connect::getConnection();
-            $sql = "INSERT INTO tarefas(data_criacao,descricao,id_tarefas,nome_tarefa,user_criador) values (?,?,?,?,?)";
+            $sql = "INSERT INTO `oportunidade`(`nome_Opp`, `id_Opp`, `descricao_Opp`, `status_Opp`, `fabricante`, `consultor_Opp`, `cliente_Opp`, `historico_Opp`, `vencimento`, `id_Opp_Fab`) values(?,?,?,?,?,?,?,?,?,?)";
             $query = $con->prepare($sql);
 
             //PARAM_STR: Representa o tipo de dados SQL CHAR, VARCHAR ou outro tipo de dados de cadeia.
-            $query->bindValue(1 ,$opp->getData_criacao()/*PDO::PARAM_DATE*/);
-            $query->bindValue(2 ,   $opp->getDescricao(), PDO::PARAM_STR);
-            $query->bindValue(3 ,  $opp->getId_tarefas(), PDO::PARAM_INT);
-            $query->bindValue(4 , $opp->getNome_tarefa(), PDO::PARAM_STR);
-            $query->bindValue(5 ,$opp->getUser_criador(), PDO::PARAM_STR);
+            $query->bindValue(7,$opp->getCliente_Opp(),PDO::PARAM_STR);
+            $query->bindValue(6,$opp->getConsultor_Opp(),PDO::PARAM_STR);
+            $query->bindValue(3,$opp->getDescricao_Opp(),PDO::PARAM_STR);
+            $query->bindValue(5,$opp->getFabricante(), PDO::PARAM_STR);
+            $query->bindValue(8,$opp->getHistorico_Opp(),PDO::PARAM_STR);
+            $query->bindValue(2,$opp->getId_Opp(),PDO::PARAM_INT);
+            $query->bindValue(1,$opp->getNome_Opp(),PDO::PARAM_STR);
+            $query->bindValue(4,$opp->getStatus_Opp(),PDO::PARAM_STR);
+            $query->bindValue(9,$opp->getVencimento());
+            $query->bindValue(10,$opp->getId_Opp_Fab(),PDO::PARAM_STR);
             $query->execute();
             
             
         } catch (Throwable $ex) {
-            $e = new Exception("Um erro ocorreu ao inserir um novo investidor. <br>" . $ex->getMessage());
+            $e = new Exception("Um erro ocorreu ao inserir uma nova Oportunidade. <br>" . $ex->getMessage());
             throw $e;
         }
     }

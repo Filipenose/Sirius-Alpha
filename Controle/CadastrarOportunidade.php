@@ -4,11 +4,16 @@ include_once '../Oportunidade.php';
 include_once '../DaoOportunidade.php';
 include_once '../Connect.php';
 
-$data_criacao = $_POST['data_criacao'];
-$descricao = $_POST['descricao'];
-$id_tarefas = $_POST['idTarefa'];
-$nome_tarefa = $_POST['NomeTarefa'];
-$user_criador = $_POST['nome_criador'];
+$nomeOpp = $_POST['nomeOpp'];
+$idOpp = null;
+$idOppFab = $_POST['idOppFab'];
+$descricaoOpp = $_POST['descricaoOpp'];
+$statusOpp = $_POST['statusOpp'];
+$fabricante = $_POST['fabricante'];
+$consultor = $_POST['consultor'];
+$cliente = $_POST['cliente'];
+$historico = $_POST['historico'];
+$vencimento= $_POST['vencimento'];
 
 /*$sql = "INSERT INTO tarefas VALUES";
 $sql .="('$data_criacao','$descricao','$id_tarefa','$nome_tarefa','$user_criador')";
@@ -21,26 +26,31 @@ if ($connect->query($sql) === TRUE) {
  }
  $connect->close();*/
 //$con = Connect::getConnection();
-    //Puxando os dados e colocando numa sessÃ£o, quando fechar a pÃ¡gina a sessÃ£o morre...
+    //Puxando os dados e colocando numa sessão, quando fechar a página a sessão morre...
 
 try {
 
 
-$task = new Tarefas();
-$task->setData_criacao($data_criacao);
-$task->setDescricao($descricao);
-$task->setId_tarefa($id_tarefas);
-$task->setNome_tarefa($nome_tarefa);
-$task->setUser_criador($user_criador);
+$opp = new Oportunidade();
+$opp->setNome_Opp($nomeOpp);
+$opp->setId_Opp($idOpp);
+$opp->setId_Opp_Fab($idOppFab);
+$opp->setDescricao_Opp($descricaoOpp);
+$opp->setStatus_Opp($statusOpp);
+$opp->setFabricante($fabricante);
+$opp->setConsultor_Opp($consultor);
+$opp->setCliente_Opp($cliente);
+$opp->setHistorico_Opp($historico);
+$opp->setVencimento($vencimento);
 
 //session_start();
-DaoTarefa::createTarefa($task);
+DaoOportunidade::createOportunidade($opp);
 
 
-if (isset($task)) {
-echo "<script language='JavaScript'>alert(' Cadastro foi realizado com seucesso !! '); window.location = '../home.php';</script>" ;   # code...
+if (isset($opp)) {
+echo "<script language='JavaScript'>alert(' Cadastro foi realizado com seucesso !! '); window.location = '../oportunidades.php';</script>" ;   # code...
 }else{
-   echo "<script language='JavaScript'>alert(' DEU MERDA PIVETE !! '); window.location = '../CadastroDeTarefa.php';</script>" ;
+   echo "<script language='JavaScript'>alert(' DEU MERDA PIVETE !! '); window.location = '../CadastroDeOportunidade.php';</script>" ;
 }
 
 //DaoTarefa::createTarefa($task);

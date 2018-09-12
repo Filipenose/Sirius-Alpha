@@ -64,7 +64,7 @@ if($sql){ // If $sql is True
         echo "<td>".$exibe["nome_Opp"]."</td>";
 
       //  echo "<tr><td>Nome: <td>";
-        echo "<td>".$exibe["id_Opp"]."</td>";
+        echo "<td>".$exibe["id_Opp_Fab"]."</td>";
 
      //   echo "<tr><td>Descrição: <td>";
         echo "<td>".$exibe["descricao_Opp"]."</td>";
