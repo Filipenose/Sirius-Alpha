@@ -13,16 +13,17 @@ static function createOportunidade(Oportunidade $opp) {
             $query = $con->prepare($sql);
 
             //PARAM_STR: Representa o tipo de dados SQL CHAR, VARCHAR ou outro tipo de dados de cadeia.
-            $query->bindValue(7,$opp->getCliente_Opp(),PDO::PARAM_STR);
-            $query->bindValue(6,$opp->getConsultor_Opp(),PDO::PARAM_STR);
-            $query->bindValue(3,$opp->getDescricao_Opp(),PDO::PARAM_STR);
-            $query->bindValue(5,$opp->getFabricante(), PDO::PARAM_STR);
-            $query->bindValue(8,$opp->getHistorico_Opp(),PDO::PARAM_STR);
-            $query->bindValue(2,$opp->getId_Opp(),PDO::PARAM_INT);
-            $query->bindValue(1,$opp->getNome_Opp(),PDO::PARAM_STR);
-            $query->bindValue(4,$opp->getStatus_Opp(),PDO::PARAM_STR);
-            $query->bindValue(9,$opp->getVencimento());
-            $query->bindValue(10,$opp->getId_Opp_Fab(),PDO::PARAM_STR);
+
+            $query->bindValue(7,                                        $opp->getCliente_Opp(),PDO::PARAM_STR);
+            $query->bindValue(6,                                    $opp->getConsultor_Opp(),PDO::PARAM_STR);
+            $query->bindValue(3,                                $opp->getDescricao_Opp(),PDO::PARAM_STR);
+            $query->bindValue(5,                            $opp->getFabricante(),PDO::PARAM_STR);
+            $query->bindValue(8,                        $opp->getHistorico_Opp(),PDO::PARAM_STR);
+            $query->bindValue(2,                    $opp->getId_Opp(),PDO::PARAM_INT);
+            $query->bindValue(1,                $opp->getNome_Opp(),PDO::PARAM_STR);
+            $query->bindValue(4,            $opp->getStatus_Opp(),PDO::PARAM_STR);
+            $query->bindValue(9,        $opp->getVencimento());
+            $query->bindValue(10,   $opp->getId_Opp_Fab(),PDO::PARAM_STR);
             $query->execute();
             
             

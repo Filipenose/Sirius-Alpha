@@ -1,6 +1,6 @@
 <?php 
 
-class PojoUsuario{
+class Usuario{
 
 
 	private $cod_usuario;
@@ -8,7 +8,7 @@ class PojoUsuario{
 	private $email_usuario;
 	private $senha_usuario;
 	private $ativo;
-	private $perfil;
+	
 
 	function __construct() {
         
@@ -54,13 +54,7 @@ class PojoUsuario{
 		 $this->ativo = strtolower($ativo);
 	}
 
-	public function getPerfil()      {
-		return $this->perfil;
-	}
 	
-	public function setPerfil($perfil)      {
-		 $this->perfil = $perfil;
-	} 
 
 }
 

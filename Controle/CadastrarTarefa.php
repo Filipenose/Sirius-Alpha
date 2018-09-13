@@ -52,13 +52,5 @@ echo "<script language='JavaScript'>alert(' Cadastro foi realizado com seucesso 
 } catch (Throwable $e) {
     echo $e->getMessage();
 } 
-/*if ($id_tarefas == $_POST['idTarefa']) {
-echo "<script language='JavaScript'>alert(' $id_tarefas !! '); window.location = '../home.php';</script>" ;   # code...
-}else{
-   echo "<script language='JavaScript'>alert(' $nome_tarefa !! '); window.location = '../CadastroDeTarefa.php';</script>" ;
-}
 
-//echo "<script language='JavaScript'>alert(' usuario cadastrado com sucesso !! '); window.location = '../home.php';</script>" ;
-
-*/
  ?>
