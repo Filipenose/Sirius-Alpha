@@ -8,16 +8,15 @@ class DaoUsuario {
 static function createUsuario(Usuario $user) {
         $con = Connect::getConnection();
         try {
-            $sql = "INSERT INTO `usuario`(`nome`, `email_usuario`, `ativo`, `senha_usuario`, `cod_usuario`) VALUES(?,?,?,?,?)";
+            $sql = "INSERT INTO `usuario`(`nome`, `email_usuario`, `ativo`, `senha_usuario`, `cod_usuario`) values (?,?,?,?,?)";
             $query = $con->prepare($sql);
 
             //PARAM_STR: Representa o tipo de dados SQL CHAR, VARCHAR ou outro tipo de dados de cadeia.
-
-            $query->bindValue(1, $user->getCod_usuario());
-            $query->bindValue(2, $user->getNome(), PDO::PARAM_STR);
-            $query->bindValue(3, $user->getEmail());
-            $query->bindValue(4, $user->getSenha(), PDO::PARAM_STR);
-            $query->bindValue(5, $user->getAtivo(), PDO::PARAM_STR);
+            $query->bindValue(1, $user->getNome(), PDO::PARAM_STR);
+            $query->bindValue(2, $user->getEmail(), PDO::PARAM_STR);
+            $query->bindValue(3, $user->getAtivo(), PDO::PARAM_STR);
+            $query->bindValue(4, $user->getSenha());
+            $query->bindValue(5, $user->getCod_usuario());
             $query->execute();
         } catch (Throwable $ex) {
             $e = new Exception("Um erro ocorreu ao inserir um novo investidor. <br>" . $ex->getMessage());

@@ -34,10 +34,10 @@ $user = new Usuario();
 $user->setCod_usuario($cod_usuario);
 $user->setEmail($email_user);
 $user->setNome($nome_user);
-$user->setSenha($senha_User);
+$user->setSenha($senha_User_Comf);
 $user->setAtivo($ativo);
 
- $con = Connect::getConnection();
+/* $con = Connect::getConnection();
  $sql =  $con->query("Select email_usuario From tarefas");
  if($sql){ 
  $emailBD = $sql->fetch_assoc();// If $sql is True
@@ -45,7 +45,7 @@ $user->setAtivo($ativo);
     	/*if ($emailBD['email_usuario'] = $email_user) {
 			//echo "<script language='JavaScript'>alert(' E-mail já cadastrado, tente novamente !! '); window.location = '../CadastroDeUsuario.php';</script>" ;  
 			echo "<script language='JavaScript'>alert(' $emailBD !! '); window.location = '../CadastroDeUsuario.php';</script>" ;  		
-    	}*/
+    	}
      
 echo "<script language='JavaScript'>alert(' E-mail já cadastrado e senha não confere, tente novamente !! '); window.location = '../CadastroDeUsuario.php';</script>" ;
    	
@@ -55,7 +55,7 @@ echo "<script language='JavaScript'>alert(' E-mail já cadastrado e senha não c
 
 else{
 	echo "<script language='JavaScript'>alert(' Cadastro Realizado Com Sucesso! !! '); window.location = '../index.php';</script>" ;
-}
+}*/
 /*elseif ($senha_User != $senha_User_Comf) {
 	echo "<script language='JavaScript'>alert(' As senhas não são iguais, tente novamente !! '); window.location = '../CadastroDeUsuario.php';</script>" ;	# code...
 }else{
@@ -64,14 +64,14 @@ else{
 //session_start();
 DaoUsuario::createUsuario($user);
 
-/*
+
 if ($senha_User != $senha_User_Comf) {
 echo "<script language='JavaScript'>alert(' As senhas não são iguais, tente novamente !! '); window.location = '../CadastroDeUsuario.php';</script>" ;   # code...
 }else{
-   echo "<script language='JavaScript'>alert(' Cadastro Realizado Com Sucesso! !! '); window.location = '../Home.php';</script>" ;
+   echo "<script language='JavaScript'>alert(' Cadastro Realizado Com Sucesso! !! '); window.location = '../index.php';</script>" ;
 }
 
-*/
+
 //DaoTarefa::createTarefa($task);
 
 } catch (Throwable $e) {
