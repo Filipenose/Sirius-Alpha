@@ -2,6 +2,7 @@
 <?php
     include_once("menu_admin.php");   
 ?>  
+<br><br>
 <!DOCTYPE html>
 <html lang="pt-br">
 <meta charset="utf-8">
@@ -19,7 +20,7 @@
 
 
 <div class="container">
-  <h2>Tarefas</h2>
+  <h2>Cadastro de oportunidades</h2>
   <form action="Controle/CadastrarOportunidade.php" method="POST">
     <div class="form-group">
       <label for="nomeOppp">Nome Da Oportunidade:</label>

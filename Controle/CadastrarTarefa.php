@@ -6,7 +6,8 @@ include_once '../Connect.php';
 
 $data_criacao = $_POST['data_criacao'];
 $descricao = $_POST['descricao'];
-$id_tarefas = $_POST['idTarefa'];
+$id_tarefas = null;
+//$id_tarefas = $_POST['idTarefa'];
 $nome_tarefa = $_POST['NomeTarefa'];
 $user_criador = $_POST['nome_criador'];
 

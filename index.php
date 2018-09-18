@@ -63,7 +63,9 @@
             </div>
 
           </div>
-          <div><a href='CadastroDeUsuario.php'><button class="btn btn-lg btn-info btn-block">Cadastrar</button></a></div>
+          <br>
+          <div align="center"><a href='CadastroDeUsuario.php'><button class="btn btn-primary btn-sm">Cadastrar</button></a>
+          </div>
         </div>
     </div>
   </body>

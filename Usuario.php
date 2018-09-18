@@ -35,7 +35,7 @@ class Usuario{
 		return $this->email_usuario;
 	}
 	public function setEmail($email_usuario)       {
-		$this->email = strtolower($email_usuario);
+		$this->email = $email_usuario;
 	}
 
 	public function getSenha()       {
@@ -51,7 +51,7 @@ class Usuario{
 	}
 
 	public function setAtivo($ativo)       {
-		 $this->ativo = strtolower($ativo);
+		 $this->ativo = $ativo;
 	}
 
 	

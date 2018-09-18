@@ -1,14 +1,17 @@
 <?php
 
+//include_once "CadastrarUsuario.php";
 include_once "Connect.php";
 include_once "Usuario.php";
+
   
 class DaoUsuario {
 
 static function createUsuario(Usuario $user) {
-        $con = Connect::getConnection();
+        
         try {
-            $sql = "INSERT INTO `usuario`(`nome`, `email_usuario`, `ativo`, `senha_usuario`, `cod_usuario`) values (?,?,?,?,?)";
+            $con = Connect::getConnection();
+            $sql = "INSERT INTO `usuario`(`nome`, `email_usuario`, `ativo`, `senha_usuario`, `cod_usuario`) values(?,?,?,?,?)";
             $query = $con->prepare($sql);
 
             //PARAM_STR: Representa o tipo de dados SQL CHAR, VARCHAR ou outro tipo de dados de cadeia.
@@ -18,6 +21,7 @@ static function createUsuario(Usuario $user) {
             $query->bindValue(4, $user->getSenha());
             $query->bindValue(5, $user->getCod_usuario());
             $query->execute();
+
         } catch (Throwable $ex) {
             $e = new Exception("Um erro ocorreu ao inserir um novo investidor. <br>" . $ex->getMessage());
             throw $e;

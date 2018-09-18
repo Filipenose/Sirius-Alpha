@@ -34,7 +34,7 @@ $user = new Usuario();
 $user->setCod_usuario($cod_usuario);
 $user->setEmail($email_user);
 $user->setNome($nome_user);
-$user->setSenha($senha_User_Comf);
+$user->setSenha($senha_User);
 $user->setAtivo($ativo);
 
 /* $con = Connect::getConnection();

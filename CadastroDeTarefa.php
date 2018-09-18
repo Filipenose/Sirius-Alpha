@@ -19,15 +19,15 @@
    include_once("menu_admin.php");   
 
 ?>  
-
+<br><br><br>
 
 <div class="container">
-  <h2>Tarefas</h2>
+  <h2>Cadastro de Tarefas</h2>
   <form action="Controle/CadastrarTarefa.php" method="POST">
-    <div class="form-group">
+    <!--<div class="form-group">
       <label for="idTarefa">ID da tarefa:</label>
       <input type="id" class="form-control" id="idTarefa" placeholder="insira o ID " name="idTarefa">
-    </div>
+    </div>-->
     <div class="form-group">
       <label for="NomeTarefa">Tarefa:</label>
       <input type="name" class="form-control" id="NomeTarefa" placeholder="insira o nome da tarefa" name="NomeTarefa">
