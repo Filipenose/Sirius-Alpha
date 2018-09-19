@@ -9,7 +9,6 @@ $email_user = $_POST['emailUser'];
 $senha_User = $_POST['senhaUser'];
 $senha_User_Comf = $_POST['senhaUser_comf'];
 $cod_usuario = null;
-$ativo = null;
 
 
 
@@ -25,7 +24,7 @@ if ($connect->query($sql) === TRUE) {
  }
  $connect->close();*/
 //$con = Connect::getConnection();
-    //Puxando os dados e colocando numa sess√£o, quando fechar a p√°gina a sess√£o morre...
+    //Puxando os dados e colocando numa sess„o, quando fechar a p·gina a sess„o morre...
 
 try {
 
@@ -35,7 +34,7 @@ $user->setCod_usuario($cod_usuario);
 $user->setEmail($email_user);
 $user->setNome($nome_user);
 $user->setSenha($senha_User);
-$user->setAtivo($ativo);
+
 
 /* $con = Connect::getConnection();
  $sql =  $con->query("Select email_usuario From tarefas");
@@ -43,11 +42,11 @@ $user->setAtivo($ativo);
  $emailBD = $sql->fetch_assoc();// If $sql is True
    while  ($email_user = $emailBD['email_usuario'] && $senha_User != $senha_User_Comf) {
     	/*if ($emailBD['email_usuario'] = $email_user) {
-			//echo "<script language='JavaScript'>alert(' E-mail j√° cadastrado, tente novamente !! '); window.location = '../CadastroDeUsuario.php';</script>" ;  
+			//echo "<script language='JavaScript'>alert(' E-mail j· cadastrado, tente novamente !! '); window.location = '../CadastroDeUsuario.php';</script>" ;  
 			echo "<script language='JavaScript'>alert(' $emailBD !! '); window.location = '../CadastroDeUsuario.php';</script>" ;  		
     	}
      
-echo "<script language='JavaScript'>alert(' E-mail j√° cadastrado e senha n√£o confere, tente novamente !! '); window.location = '../CadastroDeUsuario.php';</script>" ;
+echo "<script language='JavaScript'>alert(' E-mail j· cadastrado e senha n„o confere, tente novamente !! '); window.location = '../CadastroDeUsuario.php';</script>" ;
    	
    }
 
@@ -57,7 +56,7 @@ else{
 	echo "<script language='JavaScript'>alert(' Cadastro Realizado Com Sucesso! !! '); window.location = '../index.php';</script>" ;
 }*/
 /*elseif ($senha_User != $senha_User_Comf) {
-	echo "<script language='JavaScript'>alert(' As senhas n√£o s√£o iguais, tente novamente !! '); window.location = '../CadastroDeUsuario.php';</script>" ;	# code...
+	echo "<script language='JavaScript'>alert(' As senhas n„o s„o iguais, tente novamente !! '); window.location = '../CadastroDeUsuario.php';</script>" ;	# code...
 }else{
 	echo "<script language='JavaScript'>alert(' Cadastro Realizado Com Sucesso! !! '); window.location = '../index.php';</script>" ;
 }*/
@@ -66,7 +65,7 @@ DaoUsuario::createUsuario($user);
 
 
 if ($senha_User != $senha_User_Comf) {
-echo "<script language='JavaScript'>alert(' As senhas n√£o s√£o iguais, tente novamente !! '); window.location = '../CadastroDeUsuario.php';</script>" ;   # code...
+echo "<script language='JavaScript'>alert(' As senhas n„o s„o iguais, tente novamente !! '); window.location = '../CadastroDeUsuario.php';</script>" ;   # code...
 }else{
    echo "<script language='JavaScript'>alert(' Cadastro Realizado Com Sucesso! !! '); window.location = '../index.php';</script>" ;
 }

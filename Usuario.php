@@ -7,7 +7,7 @@ class Usuario{
 	private $nome;
 	private $email_usuario;
 	private $senha_usuario;
-	private $ativo;
+	
 	
 
 	function __construct() {
@@ -46,13 +46,7 @@ class Usuario{
 		 $this->nome = $senha_usuario;
 	}
 
-	public function getAtivo()       {
-		return $this->ativo;
-	}
-
-	public function setAtivo($ativo)       {
-		 $this->ativo = $ativo;
-	}
+	
 
 	
 

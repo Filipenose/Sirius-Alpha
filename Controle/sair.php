@@ -2,11 +2,11 @@
 session_start();
 session_destroy();
 
-//Remove todas as informaÃ§Ãµes contidas na variaveis globais
+//Remove todas as informações contidas na variaveis globais
 unset($_SESSION['email'],			
 $_SESSION['email'], 		
 $_SESSION['senha']);
 
-//redirecionar o usuÃ¡rio para a pÃ¡gina de login
+//redirecionar o usuário para a página de login
 header("Location: index.php");
 ?>

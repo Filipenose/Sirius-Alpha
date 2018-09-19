@@ -8,7 +8,7 @@ class DaoTarefa {
 static function createTarefa(Tarefas $task) {
         $con = Connect::getConnection();
         try {
-            $con = Connect::getConnection();
+           // $con = Connect::getConnection();
             $sql = "INSERT INTO tarefas(data_criacao,descricao,id_tarefas,nome_tarefa,user_criador) values (?,?,?,?,?)";
             $query = $con->prepare($sql);
 

@@ -1,4 +1,4 @@
-ï»¿<?php
+<?php
 
 include_once "../Connect.php";
 include_once '../DaoUsuario.php';
@@ -8,14 +8,14 @@ include_once '../Usuario.php';
 $usuario = $_POST['email'];
 $senha = $_POST['senha'];
 $con = Connect::getConnection();
-    //Puxando os dados e colocando numa sessÃ£o, quando fechar a pÃ¡gina a sessÃ£o morre...
+    //Puxando os dados e colocando numa sessão, quando fechar a página a sessão morre...
 try {
     $usuarios = DaoUsuario::readInvestidor("email_usuario='".$usuario."' AND senha_usuario='".$senha."'", "");
     if(isset($usuarios[0])){
        if ($user1 = $usuario[0]) {
             //escreve o usuario da sessao;
         session_start();
-        //Salva uma variÃ¡vel $user para ser usado como referÃªncia no futuro para JS's...
+        //Salva uma variável $user para ser usado como referência no futuro para JS's...
         $_SESSION['email'] = $user1;
         //direciona pra pagina certa
         echo "<script language='JavaScript'>alert('bem-vindo(a) $usuario!'); window.location = '../home.php';</script>";
@@ -59,7 +59,7 @@ try {
           
         //escreve o usuario da sessao;
         session_start();
-        //Salva uma variÃ¡vel $user para ser usado como referÃªncia no futuro para JS's...
+        //Salva uma variável $user para ser usado como referência no futuro para JS's...
         $_SESSION['email'] = $user;
         //$_SESSION['senha'] = $senha;
         //direciona pra pagina certa

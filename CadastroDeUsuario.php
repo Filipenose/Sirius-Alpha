@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 
 <head>
-  <title>Cadastro de UsuÃ¡rio</title>
+  <title>Cadastro de Usuário</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -16,7 +16,7 @@
 
 
 <div class="container">
-  <h2>Digite as informaÃ§Ãµes de cadastro</h2>
+  <h2>Digite as informações de cadastro</h2>
   <form action="Controle/CadastrarUsuario.php" method="POST" class="form-horizontal">
     <div class="form-group" >
       <label for="nomeUser">Nome :</label>

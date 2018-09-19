@@ -6,9 +6,9 @@ include_once "Oportunidade.php";
 class DaoOportunidade {
 
 static function createOportunidade(Oportunidade $opp) {
-        $con = Connect::getConnection();
+          $con = Connect::getConnection();
         try {
-            $con = Connect::getConnection();
+            //$con = Connect::getConnection();
             $sql = "INSERT INTO `oportunidade`(`nome_Opp`, `id_Opp`, `descricao_Opp`, `status_Opp`, `fabricante`, `consultor_Opp`, `cliente_Opp`, `historico_Opp`, `vencimento`, `id_Opp_Fab`) values(?,?,?,?,?,?,?,?,?,?)";
             $query = $con->prepare($sql);
 

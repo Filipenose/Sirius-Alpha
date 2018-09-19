@@ -10,7 +10,7 @@ class Connect {
     private static $charset = "utf8";
     private static $connect;
 
-    //Esta funÃ§Ã£o retorna uma conexÃ£o ativa, ou cria uma conexÃ£o nova e retorna a mesma.
+    //Esta função retorna uma conexão ativa, ou cria uma conexão nova e retorna a mesma.
     public static function getConnection() {
         if (Connect::$connect == null) {
             try {
@@ -18,7 +18,7 @@ class Connect {
                 Connect::$connect = new PDO("mysql:host=" . Connect::$host . ";dbname=" . Connect::$database . ";charset=" . Connect::$charset, Connect::$user, Connect::$password);
                 return Connect::$connect;
             } catch (PDOException $ex) {
-                echo "UM ERRO OCORREU NA CONEXÃƒO COM O BANCO DE DADOS!" . $ex->getMessage();
+                echo "UM ERRO OCORREU NA CONEXÃO COM O BANCO DE DADOS!" . $ex->getMessage();
             }
         } else {
             return Connect::$connect;
